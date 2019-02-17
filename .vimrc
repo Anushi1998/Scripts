@@ -1,10 +1,14 @@
 set number
+set title
 highlight LineNr ctermfg=LightRed
-syntax on
-colo cat
-set tabstop=2
-set shiftwidth=2
-set expandtab
-set smartindent
 set hlsearch
 
+syntax on
+set autoindent
+set smartindent
+set shiftwidth=2
+set tabstop=8
+set softtabstop=8
+set shiftwidth=8
+filetype plugin indent on
+set noexpandtab
