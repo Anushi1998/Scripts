@@ -14,3 +14,8 @@ Opacity - 85%
 HISTCONTROL=ignoredups:erasedups
 shopt -s histappend
 PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+
+git_absorb () {
+  git commit --fixup="$1"
+  git rebase -i --autosquash "$1~1"
+}
